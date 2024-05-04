@@ -1,6 +1,3 @@
-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
-classic: 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
-
 1. Download git cli --> In cmd enter git --version
 2. Navigate to the required folder -> cmd -> git init -> dir
 3. git global config.
