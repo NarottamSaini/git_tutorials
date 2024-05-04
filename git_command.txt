@@ -101,3 +101,11 @@ git push -u origin main
 git remote add origin https://github.com/NarottamSaini/git_tutorials.git
 git branch -M main
 git push -u origin main
+
+# Removing and updating the remote add
+Instead of removing and re-adding, you can do this:
+- git remote set-url origin git://new.url.here
+# To remove remote use this:
+- git remote remove origin
+# To add a remote:
+git remote add origin yourRemoteUrl
