@@ -1,0 +1,87 @@
+
+1. Download git cli --> In cmd enter git --version
+2. Navigate to the required folder -> cmd -> git init -> dir
+3. git global config.
+
+      git config --global user.name "Narottam"
+      git config --global user.email saininarottam@ymail.com
+      
+4. creating a readme file in Linux terminal
+      echo "# gittutorials" >> README.md
+      git init
+      git status : seeing untracked file
+      git add README.md  (for enabling git to track file) or git add . ( to tracl all files in folder)
+      git commit -m "First commit" ==>> Moving all the changes in the staging environment i.e env prior to git repo
+      git branch
+      git branch -M main (replacing Master branch name to main branch)
+      ## command for mapping of local repo with the git repo
+      git remote add origin https://github.com/krishnaik06/gittutorials.git
+      ## origin means variable push to the stagging area
+      git remote -v
+      git push origin main
+      ## restore the file in stagging environment i.e rever the changes made to file
+      git restore README.md
+      
+      Video 2: Stage & Snaphot
+      
+      ## If we want to untrack the file, which is tracked by using cmd : git add filename. We use git restore
+      git restore --staged "filename"
+      
+      ## it does the same thing as git restore
+      git reset "filename"
+      
+      ## seeing diff of what is changed but not staged
+      git diff --staged
+      
+      ## pushing code from stagging to the branch
+      git push origin main
+      
+      Title: Git Branch & merge
+      
+      ## seeing all git branch
+      git branch
+      
+      ## creating a new branch
+      git branch developer (developer branch new)
+      
+      ## moving to diff branch
+      git checkout developer
+      
+      ## merge the specified branch's history into the current one
+      # prior to git merge make sure to checkout to the main branch
+
+      git merge developer (branch name)
+      # post that push the code to main branch from origin
+      git push origin main
+      
+      ## Audit trail of all logs
+      git log
+      git log -p -3 (check last 3 entries)
+      
+      
+      
+Git Merge (Git merging and resolving conflict)
+
+- repo name : Application
+- local folder path: E:\New folder\Gitmerge And Conflict\Developer A  (Git clone repo)
+- local folder path: E:\New folder\Gitmerge And Conflict\Developer B  (Git clone repo)
+
+cd E:\New folder\Gitmerge And Conflict\Developer A\Application >> git branch
+#creating a new branch
+- git branch developera
+- git checkout developera
+- git status
+- git add .
+- git statu
+- git commit -m "Developer A story"
+- git branch
+## for merging code into main branch
+- git checkout main
+- ## merge developera branch onto main branch
+- git merge developera
+## pushing entire code from origin (staging) to github main repo
+- git push origin main
+
+## In case of any conflict while pushing the code onto github main repo, so git pull
+- git pull
+
